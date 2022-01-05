@@ -4,14 +4,31 @@ public class Main {
 
     public static void main(String[] args)
     {
-        int[] graph = new int[] { 2, 1, 3 } ;
-        int minimum = 0;
-        for (int i = 0; i < graph.length; i++) {
-            if (graph[i]  < graph[i + 1]) {
-                minimum = graph[i];
-            }
 
-        }
-        System.out.println(minimum);
+                                     //0  1  2
+        int[][] graph = new int[][] { {0, 10, 5},   //0
+                                      {10, 0, 15},  //1
+                                      {5, 15, 0} }; //2
+
+        int v = graph.length;
+        System.out.println("v: " + v);
+
+        Calculator calculator = new Calculator();
+        calculator.calculate(graph, 0);
     }
 }
+
+class Calculator {
+    int distance = 0;
+    public void calculate(int[][] graph, int source) {
+        for (int i = 0; i < graph.length; i++) {
+            for (int y = 0; y < graph.length; y++) {
+                System.out.println(graph[i][y]);
+            }
+        }
+    }
+}
+
+
+
+
