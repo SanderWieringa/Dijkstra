@@ -6,9 +6,9 @@ public class Main {
     {
 
                                      //0  1  2
-        int[][] graph = new int[][] { {0, 10, 5},   //0
-                                      {10, 0, 15},  //1
-                                      {5, 15, 0} }; //2
+        int[][] graph = new int[][] { {0, 10, 20},  //0
+                                      {10, 0, 5},   //1
+                                      {20, 5, 0} }; //2
 
         int v = graph.length;
         System.out.println("v: " + v);
@@ -19,13 +19,27 @@ public class Main {
 }
 
 class Calculator {
-    int distance = 0;
+
     public void calculate(int[][] graph, int source) {
-        for (int i = 0; i < graph.length; i++) {
+        int indexNull = 0;
+        int indexOne = 1;
+        int indexTwo = 2;
+
             for (int y = 0; y < graph.length; y++) {
-                System.out.println(graph[i][y]);
+                int vertex = 0;
+                int distance = 0;
+                if ()
+                if (distance < graph[source][y]) {
+                    distance += graph[source][y];
+                    System.out.println(source + " : " + y + " : "  + "distance: " + distance);
+                }
             }
-        }
+
+//            for (int y = 0; y < graph.length; y++) {
+//
+//                System.out.println(graph[i][y]);
+//            }
+
     }
 }
 
